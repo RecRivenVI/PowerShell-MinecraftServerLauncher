@@ -1,4 +1,4 @@
-#请在外部调用，模板：pwsh .\Start-FabricServer.ps1 -Version 1.20.1 -LoaderVersion 0.18.3 -JavaVersion 21
+#请在外部调用，模板：pwsh .\Start-FabricServer.ps1 -Version 1.21.1 -LoaderVersion 0.18.3 -JavaVersion 21
 param (
     [Parameter(Mandatory)]
     [ValidateNotNullOrEmpty()]

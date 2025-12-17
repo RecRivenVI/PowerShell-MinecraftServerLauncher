@@ -1,4 +1,4 @@
-#请在外部调用，模板：pwsh .\Start-Server-FunctionVersion.ps1 -Version 1.20.1 -Loader Forge -LoaderVersion 47.4.13 -JavaVersion 21
+#请在外部调用，模板：pwsh .\Start-ForgeServer.ps1 -Version 1.21.1 -Loader NeoForge -LoaderVersion 21.1.216 -JavaVersion 21
 param (
     [Parameter(Mandatory)]
     [ValidateNotNullOrEmpty()]

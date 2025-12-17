@@ -1,0 +1,1 @@
+pwsh .\Start-FabricServer.ps1 -Version 1.21.1 -LoaderVersion 0.18.3 -JavaVersion 21
