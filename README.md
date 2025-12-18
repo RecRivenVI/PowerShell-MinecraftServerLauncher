@@ -37,6 +37,7 @@ Fabric 端检测 Minecraft 版本依靠解析 server.jar 中的 version.json 内
 ### 待办（大概会忘）
 - [x] Fabric 检测机制有问题，需要完善
 - [ ] server.properties 预修改/覆盖修改
+- [ ] 以某种方式指定 java 参数
 
 ## 致谢
 ### 部分功能灵感来自 ATM9 与 ATM10 的服务端启动脚本 startserver.bat
