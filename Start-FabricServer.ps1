@@ -12,14 +12,16 @@ param (
     [string]$InstallerVersion = "1.1.0",
 
     [ValidateNotNullOrEmpty()]
-    [string]$JavaVersion = "21"
+    [string]$JavaVersion = "21",
+
+    [switch]$ImmediatelyExit
 )
 
 $Minecraft = @{
-    Version       = $Version
-    LoaderVersion = $LoaderVersion
+    Version          = $Version
+    LoaderVersion    = $LoaderVersion
     InstallerVersion = $InstallerVersion
-    JavaVersion   = $JavaVersion
+    JavaVersion      = $JavaVersion
 }
 
 #代理
@@ -34,7 +36,7 @@ $Loaders = @{
     Fabric = @{
         InstallerUrl  = "https://maven.fabricmc.net/net/fabricmc/fabric-installer/$InstallerVersion/fabric-installer-$InstallerVersion.jar"
         InstallerPath = "fabric-installer-$InstallerVersion.jar"
-        LoaderPath = "libraries\net\fabricmc\fabric-loader\$($Minecraft.LoaderVersion)\fabric-loader-$($Minecraft.LoaderVersion).jar"
+        LoaderPath    = "libraries\net\fabricmc\fabric-loader\$($Minecraft.LoaderVersion)\fabric-loader-$($Minecraft.LoaderVersion).jar"
     }
 }
 
@@ -62,6 +64,10 @@ function Start-Server {
 }
 #按任意键停止服务端
 function Stop-Server {
+    if ($ImmediatelyExit) {
+        Write-Host "SERVER STOPPED"
+        return
+    }
     Write-Host "SERVER STOPPED, PRESS ANY KEY TO CONTINUE"
     $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 }

@@ -1,1 +1,1 @@
-pwsh .\Start-ForgeServer.ps1 -Version 1.20.1 -Loader Forge -LoaderVersion 47.4.13 -JavaVersion 21
+pwsh .\Start-ForgeServer.ps1 -Version 1.20.1 -Loader Forge -LoaderVersion 47.4.13 -JavaVersion 21 -ImmediatelyExit

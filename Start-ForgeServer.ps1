@@ -13,7 +13,9 @@ param (
     [string]$LoaderVersion,
 
     [ValidateNotNullOrEmpty()]
-    [string]$JavaVersion = "21"
+    [string]$JavaVersion = "21",
+
+    [switch]$ImmediatelyExit
 )
 
 $Minecraft = @{
@@ -69,6 +71,10 @@ function Start-Server {
 }
 #按任意键停止服务端
 function Stop-Server {
+    if ($ImmediatelyExit) {
+        Write-Host "SERVER STOPPED"
+        return
+    }
     Write-Host "SERVER STOPPED, PRESS ANY KEY TO CONTINUE"
     $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 }
