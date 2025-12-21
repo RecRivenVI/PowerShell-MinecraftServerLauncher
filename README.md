@@ -1,4 +1,4 @@
-# 专用于 Minecraft 模组服务端的启动脚本
+# 专用于 Minecraft Forge（1.17+），NeoForge 与 Fabric 服务端的启动脚本
 
 ## 使用 Powershell 编写
 
@@ -45,6 +45,7 @@ Fabric 端检测 Minecraft 版本依靠解析 server.jar 中的 version.json 内
 
 - [x] Fabric 检测机制有问题，需要完善
 - [x] 通过参数指定服务器关闭后的行为（等待任意键或直接退出）
+- [ ] 支持 1.16.5 以及更早版本的 Forge 服务端启动（目前只能下载并安装，检测逻辑与启动命令待完善）
 - [ ] 控制台输出内容调整（以及中文支持）
 - [ ] server.properties 预修改/覆盖修改
 - [ ] 以某种方式指定 java 参数
